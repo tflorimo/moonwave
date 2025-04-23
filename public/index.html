@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moonwave</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Moonwave - Ventas</h1>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <nav class="main-nav">
+      <ul class="tabs">
+        <li class="tab active" data-tab="inicio">Inicio</li>
+        <li class="tab" data-tab="ventas">Ventas</li>
+        <li class="tab" data-tab="clientes">Clientes</li>
+        <li class="tab" data-tab="inversiones">Inversiones</li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="inicio" class="tab-content active">
+        <h2>Panel de Control</h2>
+        
+        <div class="cards-container">
+          <div class="card">
+            <h3>Ventas del mes</h3>
+            <p class="card-value">€24,850</p>
+            <p class="card-change positive">+12.5%</p>
+          </div>
+          
+          <div class="card">
+            <h3>Ingresos</h3>
+            <p class="card-value">€18,320</p>
+            <p class="card-change positive">+8.3%</p>
+          </div>
+          
+          <div class="card">
+            <h3>Inversión</h3>
+            <p class="card-value">€5,600</p>
+            <p class="card-change negative">-2.1%</p>
+          </div>
+          
+          <div class="card">
+            <h3>Ganancia promedio</h3>
+            <p class="card-value">€12,720</p>
+            <p class="card-change positive">+10.2%</p>
+          </div>
+        </div>
+        
+        <div class="chart-container">
+          <h3>Ventas por día</h3>
+          <canvas id="salesChart"></canvas>
+        </div>
+      </section>
+
+      <section id="ventas" class="tab-content">
+        <h2>Ventas</h2>
+        <p>Contenido de la sección de ventas aparecerá aquí.</p>
+      </section>
+
+      <section id="clientes" class="tab-content">
+        <h2>Clientes</h2>
+        <p>Contenido de la sección de clientes aparecerá aquí.</p>
+      </section>
+
+      <section id="inversiones" class="tab-content">
+        <h2>Inversiones</h2>
+        <p>Contenido de la sección de inversiones aparecerá aquí.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
