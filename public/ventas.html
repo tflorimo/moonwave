@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moonwave - Nueva venta</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/ventas.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Nueva venta</h1>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <nav class="main-nav">
+      <ul class="tabs">
+        <li class="tab" data-tab="">Inicio</li>
+        <li class="tab active" data-tab="ventas">Ventas</li>
+        <li class="tab" data-tab="clientes">Clientes</li>
+        <li class="tab" data-tab="inversiones">Inversiones</li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="ventas" class="tab-content active">
+        <h2>Registro de Venta</h2>
+        
+        <div class="form-container">
+          <form id="ventaForm" class="gothic-form">
+            <div class="form-group">
+              <label for="cliente">Cliente</label>
+              <input type="text" id="cliente" name="cliente" required placeholder="Nombre del cliente">
+              <div class="form-error" id="cliente-error"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="direccion">Dirección de envío</label>
+              <textarea id="direccion" name="direccion" required placeholder="Dirección completa de envío"></textarea>
+              <div class="form-error" id="direccion-error"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="producto">Producto vendido</label>
+              <input type="text" id="producto" name="producto" required placeholder="Nombre del producto">
+              <div class="form-error" id="producto-error"></div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group half">
+                <label for="precio">Precio de venta (€)</label>
+                <input type="number" id="precio" name="precio" min="0" step="0.01" required placeholder="0.00">
+                <div class="form-error" id="precio-error"></div>
+              </div>
+              
+              <div class="form-group half">
+                <label for="envio">Costo de envío (€)</label>
+                <input type="number" id="envio" name="envio" min="0" step="0.01" required placeholder="0.00">
+                <div class="form-error" id="envio-error"></div>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group half">
+                <label for="inversion">Monto invertido</label>
+                <div class="select-wrapper">
+                  <select id="inversion" name="inversion" required>
+                    <option value="" disabled selected>Seleccionar monto</option>
+                    <!-- Options will be populated dynamically -->
+                  </select>
+                </div>
+                <div class="form-error" id="inversion-error"></div>
+              </div>
+              
+              <div class="form-group half">
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <div class="form-error" id="fecha-error"></div>
+              </div>
+            </div>
+            
+            <div class="form-group result-group">
+              <label for="ganancia">Ganancia</label>
+              <div id="ganancia" class="result-value">€0.00</div>
+              <div class="result-calculation">Precio de venta - (Costo de envío + Monto invertido)</div>
+            </div>
+            
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Guardar</button>
+              <button type="reset" class="btn-secondary">Limpiar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="js/ventas.js"></script>
+</body>
+</html>

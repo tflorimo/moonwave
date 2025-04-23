@@ -13,6 +13,10 @@ app.get("/", (req, res) => {
     res.sendFile("index.html", {root: "public"});
 })
 
+app.get("/ventas", (req, res) => {
+    res.sendFile("ventas.html", {root: "public"});
+})
+
 app.use((req, res) => {
     res.status(404).send({success: false, message: "No encontrado"});
 })

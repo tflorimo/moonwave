@@ -1,22 +1,7 @@
+import { setupTabNavigation } from './tabs.js';
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Tab navigation
-    const tabs = document.querySelectorAll('.tab');
-    const tabContents = document.querySelectorAll('.tab-content');
-    
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const tabId = tab.getAttribute('data-tab');
-        
-        // Remove active class from all tabs and contents
-        tabs.forEach(t => t.classList.remove('active'));
-        tabContents.forEach(content => content.classList.remove('active'));
-        
-        // Add active class to current tab and content
-        tab.classList.add('active');
-        document.getElementById(tabId).classList.add('active');
-      });
-    });
-    
+    setupTabNavigation();
     // Mobile menu toggle
     const menuToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('.main-nav');
